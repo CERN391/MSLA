@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>MSLA-纯净的整合工具站</title>
+</head>
+<body background="6.png">
+    <h1 style="text-align: center;">欢迎来到MSLA 一个纯净的整合工具站</h1>
+    <!-- 我们鄙视因利益原因而攻击个人免费网站的攻击者！ -->
+    <!-- 初来乍去 2022年2月6日立项 -->
+    <p>北京时间</p>
+    <script>
+        Date.prototype.format = function (fmt) {
+            var o = {
+                "y+": this.getFullYear, //年
+                "M+": this.getMonth() + 1, //月份
+                "d+": this.getDate(), //日
+                "h+": this.getHours(), //小时
+                "m+": this.getMinutes(), //分
+                "s+": this.getSeconds() //秒
+            };
+            if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+            for (var k in o)
+                if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            return fmt;
+        }
+        setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy-MM-dd hh:mm:ss');", 1000);
+    </script>
+    <div id="dateTime" style="color: blue;font-size: 20px; "></div>
+    <a href="dec.html">
+        <button style="color: blueviolet;">天气</button>
+    </a>
+    <h1 style="color:greenyellow;text-align:center;text-shadow: 2px 2px 5px blue;">windows区</h1>
+    <a href="http://download.tualatin.club/图吧工具箱2022.01绿色版自动解压程序.exe">
+    <button style="color: red;box-shadow: 0 0 6px rgba(35, 173, 278, 1);">图吧工具箱下载</button>
+    </a>
+    <!-- 不敢保证是新版 有问题联系管理员解决 -->
+    <br/>
+    <a href="https://msdn.itellyou.cn/">
+        <button style="color: brown;box-shadow: 0 0 6px rgba(35, 173, 278, 1);">MSDN 我告诉你</button>
+    </a>
+    <br/>
+    <a href="https://next.itellyou.cn/Identity/Account/Login?ReturnUrl=%2FOriginal%2FIndex">
+        <button style="color: chocolate;box-shadow: 0 0 6px rgba(35, 173, 278, 1);">新版MSDN</button>
+    </a>
+    <br/>
+    <a href="https://store.steampowered.com/about/">
+        <button style="color: blueviolet ;box-shadow: 0 0 6px rgba(35, 173, 278, 1);">steam官网</button>
+    </a>
+    <br/>
+    <hr/>
+    <h1 style="color:red;text-align: center;">android区</h1>
+    <br/>
+    <a href="">
+        <button></button>
+    </a>
+    <br/>
+</body>
+</html>
